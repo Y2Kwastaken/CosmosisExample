@@ -1,6 +1,6 @@
 plugins {
     id("java")
-    id("sh.miles.cosmosis") version "1.0.0-SNAPSHOT"
+    id("sh.miles.cosmosis") version "1.0.1-SNAPSHOT"
 }
 
 group = properties["maven_group"] as String
