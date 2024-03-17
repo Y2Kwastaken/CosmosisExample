@@ -2,7 +2,7 @@ rootProject.name = "CosmosisExample"
 
 pluginManagement {
     repositories {
-        mavenLocal()
-        gradlePluginPortal()
+        mavenCentral()
+        maven("https://maven.miles.sh/snapshots")
     }
 }
