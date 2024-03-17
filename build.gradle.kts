@@ -10,14 +10,6 @@ cosmosis.version = properties["cosmic_reach_version"] as String
 cosmosis.repoBundle()
 cosmosis.devBundle()
 
-tasks.runClient {
-    launcherFileGeneric = "launch"
-}
-
-tasks.downloadLoader {
-    this.loaderLink = uri("https://github.com/ForwarD-NerN/CosmicReach-Mod-Loader/releases/download/latest/cosmicreach-fabric-modloader.zip").toURL()
-}
-
 tasks.processResources {
     filteringCharset = "UTF-8"
 
