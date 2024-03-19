@@ -1,19 +1,26 @@
+import sh.miles.cosmosis.core.DriverType
+
 plugins {
     id("java")
-    id("sh.miles.cosmosis") version "1.0.1-SNAPSHOT"
+    id("sh.miles.cosmosis") version "2.0.0-SNAPSHOT"
 }
 
 group = properties["maven_group"] as String
 version = properties["mod_version"] as String
-cosmosis.version = properties["cosmic_reach_version"] as String
 
 repositories {
-    cosmosis.repoBundle()
     maven("https://maven.miles.sh/snapshots/")
 }
 
 dependencies {
-    cosmosis.devBundle()
+}
+
+tasks.runCosmicTools {
+    driver = DriverType.FIREFOX
+}
+
+tasks.copyCosmicReach {
+    version = "0.1.8"
 }
 
 tasks.processResources {
